@@ -1,10 +1,11 @@
 import * as express from "express";
+import router from "@src/router";
 
 const app = express();
-const router = express.Router();
-router.get("/", (req, res) => {
-  res.send("Hello Prototype");
-})
+
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
 app.use("/", router);
 
 const server = app.listen("8080");
