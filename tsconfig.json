@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "baseUrl": "",
+    "paths": {
+      "@src/*" : ["./src/*"]
+    },
+    "outDir": "lib",
+  },
+  "compileOnSave": true,
+  "include": [
+    "src/**/*",
+  ]
+}
